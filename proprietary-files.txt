@@ -1140,7 +1140,6 @@ vendor/lib64/libmifaceempty.so
 vendor/lib64/libmemunreachable.so
 vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libmialgo.so
-vendor/lib64/libmemunreachable.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libjni_aidenoiserutilv2.so
 vendor/lib64/libjni_imageutil.so
