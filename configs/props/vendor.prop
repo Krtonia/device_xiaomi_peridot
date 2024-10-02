@@ -216,6 +216,12 @@ dalvik.vm.image-dex2oat-threads=4
 ro.vendor.audio.dolby.vision.support=false
 debug.config.media.video.dolby_vision_suports=false
 
+# Dolby Atmos
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
+ro.vendor.audio.dolby.dax.support=true
+ro.vendor.audio.dolby.surround.enable=true
+
 # DPM
 persist.vendor.dpm.vndr.feature=1
 persist.vendor.dpm.vndr.halservice.enable=1
