@@ -493,7 +493,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \
-    sensors.xiaomi.peridot
 
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
