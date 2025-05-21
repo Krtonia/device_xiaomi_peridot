@@ -38,6 +38,7 @@ import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 import org.lineageos.settings.touchsampling.TouchSamplingService;
 import org.lineageos.settings.touchsampling.TouchSamplingTileService;
 import org.lineageos.settings.chargecontrol.ChargeControlService;
+import org.lineageos.settings.touch.DoubleTapService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts";
@@ -65,8 +66,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             // Override HDR types
             overrideHdrTypes(context);
 
+            // Restore touch sampling rate
+            TouchSamplingUtils.restoreSamplingValue(context);
+
         } catch (Exception e) {
-            Log.e(TAG, "Error during locked boot completed processing", e);
+            Log.e(TAG, "Error during locked boot completed", e);
         }
     }
 
@@ -107,6 +111,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 		
 		// Start Charge Control Service
         context.startServiceAsUser(new Intent(context, ChargeControlService.class), UserHandle.CURRENT);
+
+        // Start Touchfeatures service
+        context.startServiceAsUser(new Intent(context, DoubleTapService.class), UserHandle.CURRENT);
+
     }
 
     private void overrideHdrTypes(Context context) {

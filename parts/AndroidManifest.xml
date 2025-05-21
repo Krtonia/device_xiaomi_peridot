@@ -388,5 +388,9 @@
                 android:value="true" />
         </service>
 
+        <service 
+            android:name=".touch.DoubleTapService"
+            android:exported="false"/>
+
     </application>
 </manifest>
