@@ -464,6 +464,10 @@ on property:sys.boot_completed=1
     # Touch
     chown system system /sys/devices/platform/goodix_ts.0/switch_report_rate
     chmod 0664 /sys/devices/platform/goodix_ts.0/switch_report_rate
+	
+	# Allow system to modify input_suspend
+    chown system system /sys/class/qcom-battery/input_suspend
+    chmod 0664 /sys/class/qcom-battery/input_suspend
 
 on init && property:ro.boot.mode=charger
     wait_for_prop vendor.all.modules.ready 1
