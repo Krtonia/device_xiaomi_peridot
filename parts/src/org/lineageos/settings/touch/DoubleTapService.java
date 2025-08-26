@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2025 kenway214
- * Copyright (C) 2025 GuidixX
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +31,6 @@ import android.os.ServiceManager;
 
 public class DoubleTapService extends Service {
     private static final int DOUBLE_TAP_TO_WAKE_MODE = 14;
-    private static final int TOUCH_AOD_ENABLE_MODE = 11;
     private ITouchFeature mTouchFeature;
 
     @Override
@@ -58,55 +56,27 @@ public class DoubleTapService extends Service {
     private void registerObserver() {
         ContentResolver cr = getContentResolver();
         cr.registerContentObserver(
-            Settings.Secure.getUriFor(Settings.Secure.DOZE_DOUBLE_TAP_GESTURE),
+            Settings.Secure.getUriFor(Settings.Secure.DOUBLE_TAP_TO_WAKE),
             true,
             new ContentObserver(new Handler()) {
                 @Override
                 public void onChange(boolean selfChange) {
-                    updateDoubleTapMode();
+                    updateMode();
                 }
             }
         );
-
-        cr.registerContentObserver(
-            Settings.Secure.getUriFor(Settings.Secure.DOZE_DOUBLE_TAP_GESTURE_AMBIENT),
-            true,
-            new ContentObserver(new Handler()) {
-                @Override
-                public void onChange(boolean selfChange) {
-                    updateAmbientDisplayMode();
-                }
-            }
-        );
-        
-        updateDoubleTapMode();
-        updateAmbientDisplayMode();
+        updateMode();
     }
 
-    private void updateDoubleTapMode() {
+    private void updateMode() {
         try {
             boolean enabled = Settings.Secure.getInt(
                 getContentResolver(),
-                Settings.Secure.DOZE_DOUBLE_TAP_GESTURE,
+                Settings.Secure.DOUBLE_TAP_TO_WAKE,
                 0
             ) == 1;
             if (mTouchFeature != null) {
                 mTouchFeature.setTouchMode(0, DOUBLE_TAP_TO_WAKE_MODE, enabled ? 1 : 0);
-            }
-        } catch (Exception e) {
-            // Silent catch
-        }
-    }
-
-    private void updateAmbientDisplayMode() {
-        try {
-            boolean enabled = Settings.Secure.getInt(
-                getContentResolver(),
-                Settings.Secure.DOZE_DOUBLE_TAP_GESTURE_AMBIENT,
-                0
-            ) == 1;
-            if (mTouchFeature != null) {
-                mTouchFeature.setTouchMode(0, TOUCH_AOD_ENABLE_MODE, enabled ? 1 : 0);
             }
         } catch (Exception e) {
             // Silent catch
