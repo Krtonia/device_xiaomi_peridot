@@ -23,10 +23,6 @@ genfscon sysfs /class/power_supply/battery/constant_charge_current              
 genfscon sysfs /class/qcom-battery/sport_mode                                                                u:object_r:sysfs_fastcharge:s0
 
 # Sensors
-genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_enabled                                   u:object_r:vendor_sysfs_sensors:s0
-genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_state                                     u:object_r:vendor_sysfs_sensors:s0
-genfscon sysfs /devices/virtual/touch/touch_dev/gesture_double_tap_enabled                                   u:object_r:vendor_sysfs_sensors:s0
-genfscon sysfs /devices/virtual/touch/touch_dev/gesture_double_tap_state                                     u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/touch/touch_dev/fod_longpress_gesture_enabled                                u:object_r:vendor_sysfs_sensors:s0
 
 # Wakeup
