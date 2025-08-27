@@ -38,3 +38,4 @@ genfscon sysfs /devices/platform/goodix_ts.0/wakeup                             
 
 # Touch Sampling
 genfscon sysfs /devices/platform/goodix_ts.0/switch_report_rate                                              u:object_r:sysfs_htsr:s0
+genfscon sysfs /bus/spi/drivers/focaltech_ts/spi1.0/switch_report_rate                                       u:object_r:sysfs_htsr:s0
