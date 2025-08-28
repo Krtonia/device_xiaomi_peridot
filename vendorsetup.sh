@@ -45,8 +45,5 @@ git clone https://github.com/poco-f6-peridot/android_vendor_qcom_opensource_vibr
 # Kernel
 git clone https://github.com/Krtonia/device_xiaomi_peridot-kernel.git -b 16 device/xiaomi/peridot-kernel --depth=1
 
-# ViPER4AndroidFX
-git clone https://github.com/Krtonia/packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
-
 # Vendor 
 git clone https://github.com/Krtonia/vendor_xiaomi_peridot.git -b inf-16 vendor/xiaomi/peridot
