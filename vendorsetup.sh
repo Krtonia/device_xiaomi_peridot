@@ -50,3 +50,6 @@ git clone https://github.com/Krtonia/packages_apps_ViPER4AndroidFX.git -b v4a pa
 
 # Vendor 
 git clone https://github.com/Krtonia/vendor_xiaomi_peridot.git -b inf-16 vendor/xiaomi/peridot
+
+# Dolby
+git clone https://github.com/bery-test/android_hardware_dolby.git -b lineage-23.0 hardware/dolby
