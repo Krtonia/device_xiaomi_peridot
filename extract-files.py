@@ -288,6 +288,11 @@ blob_fixups: blob_fixups_user_type = {
             r'.+media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio|dolby_audio).+\n',
             ''
         )
+        
+        .regex_replace(
+            r'(?s)(<MediaCodecs.*?>)',r'\1\n    <Include href="media_codecs_dolby_audio.xml" />'
+        ),
+            
         .regex_replace(
             r'        <MediaCodec name="c2\.qti\.dv\.(decoder|encoder).*type="video/dolby-vision".*>\n(.*\n)*?        </MediaCodec>\n',
             ''

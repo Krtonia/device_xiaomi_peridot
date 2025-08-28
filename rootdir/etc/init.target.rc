@@ -344,6 +344,10 @@ on early-boot
     # Enable WLAN cold boot calibration
     write /sys/kernel/cnss/fs_ready 1
     verity_update_state
+	
+	# Dolby
+    mkdir /data/vendor/dolby 0770 media media
+    mkdir /data/vendor/multimedia 0775 system system
 
 on boot
     write /dev/cpuset/audio-app/cpus 0-1

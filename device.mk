@@ -229,6 +229,9 @@ PRODUCT_PACKAGES += \
 # DumpState
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate-V1-ndk.vendor
+	
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
 # but also allow explicit overriding for testing and development.
