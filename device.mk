@@ -223,6 +223,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdrm.vendor
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # DumpState
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate-V1-ndk.vendor
