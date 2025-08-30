@@ -12,3 +12,9 @@ allow system_server sysfs_extcon:file { getattr open read write };
 
 # Allow system_server to read vendor libraries
 allow system_server vendor_file:file { getattr open read };
+
+# Allow getattr on various proc files
+allow system_server { 
+  proc_uptime proc_diskstats proc_interrupts proc_cgroups 
+  proc_swaps proc_zoneinfo proc_buddyinfo proc_bootconfig 
+}:file getattr;
