@@ -242,12 +242,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
-# Fling
-ro.vendor.qti.cgroup_follow.enable=true 
-persist.vendor.qti.inputopts.enable=true 
-persist.vendor.qti.inputopts.movetouchslop=0.6 
-ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
-
 # Enable Vulkan for HWUI
 ro.hwui.use_vulkan=true
 
@@ -255,14 +249,12 @@ ro.hwui.use_vulkan=true
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
-debug.hwui.skia_atrace_enabled=false
 debug.angle.feature_overrides_enabled=preferLinearFilterForYUV:mapUnspecifiedColorSpaceToPassThrough
 debug.egl.hw=0
 debug.renderengine.backend=skiavkthreaded
 debug.sf.auto_latch_unsignaled=0
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
-debug.sf.disable_client_composition_cache=0
 debug.sf.layer_caching_active_layer_timeout_ms=1000
 debug.sf.early.app.duration=16600000
 debug.sf.early.sf.duration=16600000
@@ -287,7 +279,6 @@ persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=256
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.pineapple.api34
 ro.egl.blobcache.multifile=true
-ro.surface_flinger.enable_layer_caching=false
 ro.egl.blobcache.multifile_limit=33554432
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
@@ -297,6 +288,7 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.game_default_frame_rate_override=120
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_idle_timer_ms=4000
