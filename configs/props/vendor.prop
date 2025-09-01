@@ -248,7 +248,6 @@ persist.backup.ntpServer=0.pool.ntp.org
 # Graphics
 debug.hwui.skia_atrace_enabled=false
 debug.angle.feature_overrides_enabled=preferLinearFilterForYUV:mapUnspecifiedColorSpaceToPassThrough
-debug.egl.hw=0
 debug.renderengine.backend=skiavkthreaded
 debug.sf.auto_latch_unsignaled=0
 debug.hwui.skia_tracing_enabled=false
@@ -258,7 +257,6 @@ debug.sf.layer_caching_active_layer_timeout_ms=1000
 debug.sf.enable_gl_backpressure=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.frame_rate_multiple_threshold=120
-debug.sf.hw=0
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.region_sampling_timer_timeout_ns=200000000
