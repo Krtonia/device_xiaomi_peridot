@@ -319,7 +319,6 @@ vendor.display.override_doze_mode=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
 vendor.display.perf_hint_window=50
-ro.config.avoid_gfx_accel=true
 
 # HWUI
 debug.hwui.use_hint_manager=true
