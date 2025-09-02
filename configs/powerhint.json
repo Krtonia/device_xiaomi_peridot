@@ -629,19 +629,19 @@
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "2073600"
+      "Value": "9999999"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1593600"
+      "Value": "2016000"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPUBigPlusClusterMinFreq",
       "Duration": 0,
-      "Value": "1900800"
+      "Value": "9999999"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
