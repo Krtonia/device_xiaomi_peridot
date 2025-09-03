@@ -52,6 +52,13 @@ persist.radio.is_vonr_enabled_0=true
 persist.radio.is_vonr_enabled_1=true
 persist.vendor.vonr_setting_support=1
 
+# About phone
+ro.product.marketname=Poco F6
+ro.infinity.soc=Snapdragon 8s Gen 3
+ro.infinity.battery=5000 mah
+ro.infinity.display=1220 x 2712, 120 Hz
+ro.infinity.camera=50/8MP & 20MP
+
 # Disable default frame rate limit for games
 debug.graphics.game_default_frame_rate.disabled=1
 
