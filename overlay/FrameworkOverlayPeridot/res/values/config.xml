@@ -1091,7 +1091,7 @@
     <item name="config_wallpaperMaxScale" format="float" type="dimen">1</item>
 
     <!-- Auto-brightness sensor type string -->
-    <string name="config_displayLightSensorType">"android.sensor.light"</string>
+    <string name="config_displayLightSensorType">"xiaomi.sensor.ambientlight.raw"</string>
 	
 	<!-- Boolean indicating USSD over IMS is allowed.
      If it is not supported due to modem limitations, USSD send over the CS pipe instead.-->
