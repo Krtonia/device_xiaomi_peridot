@@ -63,7 +63,8 @@
         "1056000",
         "940800",
         "787200",
-        "633600"
+        "633600",
+        "480000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -90,7 +91,8 @@
         "1056000",
         "940800",
         "787200",
-        "633600"
+        "633600",
+        "480000"
       ],
       "ResetOnInit": true
     },
@@ -114,7 +116,8 @@
         "1094400",
         "960000",
         "787200",
-        "633600"
+        "633600",
+        "480000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -139,7 +142,8 @@
         "1094400",
         "960000",
         "787200",
-        "633600"
+        "633600",
+        "480000"
       ],
       "ResetOnInit": true
     },
@@ -629,19 +633,19 @@
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "9999999"
+      "Value": "2073600"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "2016000"
+      "Value": "1593600"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPUBigPlusClusterMinFreq",
       "Duration": 0,
-      "Value": "9999999"
+      "Value": "1900800"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
