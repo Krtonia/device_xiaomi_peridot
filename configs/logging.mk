@@ -5,7 +5,11 @@ SPAMMY_LOG_TAGS := \
     MiClstc \
     MiEvent \
     MiStcImpl \
+	Diag_Lib \
+    KernelSU \
     SDM \
+    AGM \
+    AHAL \
     SRE \
     libsensor-boledalgo \
     libsensor-parseRGB \
@@ -55,5 +59,5 @@ SPAMMY_LOG_TAGS := \
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
-    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
 endif
