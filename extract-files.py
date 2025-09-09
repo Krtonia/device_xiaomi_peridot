@@ -298,50 +298,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(
             r'.+media_codecs_(google_audio|google_c2|google_telephony|vendor_audio).+\n',
             ''
-        )
-        .regex_replace(
-            r'        <MediaCodec name="c2\.qti\.dv\.(decoder|encoder).*type="video/dolby-vision".*>\n(.*\n)*?        </MediaCodec>\n',
-            ''
-        )
-        .regex_replace(
-            r'        <MediaCodec name="c2\.qti\.dv\.decoder\.secure".*type="video/dolby-vision".*>\n(.*\n)*?        </MediaCodec>\n',
-            ''
-        ),
-
-    'vendor/etc/kvh2xml.xml': blob_fixup()
-        .regex_replace(
-            r'.+<TAG id="0xc000033" name="dolby_effect_param_tag"/>.*\n',
-            ''
-        ),
-
-    'vendor/etc/clstc_config_library.xml': blob_fixup()
-        .regex_replace(
-            r'(<library>\s*<name>libdolbyclstc\.so</name>\s*<priority>1</priority>\s*)<enable>1</enable>',
-            r'\1<enable>0</enable>'
-        ),
-
-    'product/etc/device_features/peridot.xml': blob_fixup()
-        .regex_replace(
-            r'<bool name="support_dolby_version_brighten">true</bool>',
-            '<bool name="support_dolby_version_brighten">false</bool>'
-        )
-        .regex_replace(
-            r'<bool name="gallery_support_dolby">true</bool>',
-            '<bool name="gallery_support_dolby">false</bool>'
-        ),
-
-    'vendor/etc/media_cliffs_v0/video_system_specs.json': blob_fixup()
-        .regex_replace(
-            r'        "DolbyVision": \{\s*"profiles": \[4, 5, 8\],\s*"max_main_tier_level": 12,\s*"max_high_tier_level": 12\s*\},',
-            ''
-        )
-        .regex_replace(
-            r'.+//dolby post process.*\n',
-            ''
-        )
-        .regex_replace(
-            r'.+"libqcodec2_dolbydecoderfilter\.so",.*\n',
-            ''
         ),
 }
 
