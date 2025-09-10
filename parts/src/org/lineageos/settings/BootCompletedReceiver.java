@@ -30,14 +30,15 @@ import android.view.Display.HdrCapabilities;
 
 import org.lineageos.settings.display.ColorModeService;
 import org.lineageos.settings.doze.PocketService;
-import org.lineageos.settings.thermal.ThermalUtils;
-import org.lineageos.settings.thermal.ThermalTileService;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.turbocharging.TurboChargingService;
 import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 import org.lineageos.settings.touchsampling.TouchSamplingService;
 import org.lineageos.settings.touchsampling.TouchSamplingTileService;
 import org.lineageos.settings.chargecontrol.ChargeControlService;
+import org.lineageos.settings.touch.DoubleTapService;
+import org.lineageos.settings.touch.SingleTapService;
+import org.lineageos.settings.touch.SoFodTouchService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts";
@@ -65,8 +66,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             // Override HDR types
             overrideHdrTypes(context);
 
+            // Restore touch sampling rate
+            TouchSamplingUtils.restoreSamplingValue(context);
+
         } catch (Exception e) {
-            Log.e(TAG, "Error during locked boot completed processing", e);
+            Log.e(TAG, "Error during locked boot completed", e);
         }
     }
 
@@ -80,10 +84,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Start Color Mode Service
         context.startServiceAsUser(new Intent(context, ColorModeService.class), UserHandle.CURRENT);
-
-        // Start Thermal Management Services
-        ThermalUtils.getInstance(context).startService();
-        context.startServiceAsUser(new Intent(context, ThermalTileService.class), UserHandle.CURRENT);
 
         // Start Refresh Rate Service
         RefreshUtils.startService(context);
@@ -107,6 +107,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 		
 		// Start Charge Control Service
         context.startServiceAsUser(new Intent(context, ChargeControlService.class), UserHandle.CURRENT);
+
+        // Start Touchfeatures service
+        context.startServiceAsUser(new Intent(context, DoubleTapService.class), UserHandle.CURRENT);
+        context.startServiceAsUser(new Intent(context, SoFodTouchService.class), UserHandle.CURRENT);
+
+        // Start Single Tap Service
+        context.startServiceAsUser(new Intent(context, SingleTapService.class), UserHandle.CURRENT);
     }
 
     private void overrideHdrTypes(Context context) {

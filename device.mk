@@ -126,6 +126,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Bluetooth Library Deps
+PRODUCT_PACKAGES += \
+    libbluetooth_audio_session \
+    libbthost_if.vendor \
+    libldacBT_bco \
+    libldacBT_bco.vendor \
+    liblhdc \
+    liblhdcBT_enc \
+    liblhdcdec \
+    liblhdcBT_dec
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
@@ -454,6 +465,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayPeridot \
+    BluetoothOverlayPeridot \
     CarrierConfigOverlayPeridot \
     FrameworkOverlayPeridot \
     LineageSDKOverlayPeridot \
@@ -626,9 +638,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
 # Thermal
-$(call soong_config_set,qti_thermal,netlink,true)
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.qti \
     android.hardware.thermal-V1-ndk.vendor \
     android.hardware.thermal@2.0.vendor
 
