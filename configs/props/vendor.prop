@@ -248,28 +248,19 @@ persist.backup.ntpServer=0.pool.ntp.org
 # Graphics
 debug.hwui.skia_atrace_enabled=false
 debug.angle.feature_overrides_enabled=preferLinearFilterForYUV:mapUnspecifiedColorSpaceToPassThrough
-debug.egl.hw=0
 debug.renderengine.backend=skiavkthreaded
-debug.sf.auto_latch_unsignaled=0
+debug.sf.auto_latch_unsignaled=1
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
 debug.sf.disable_client_composition_cache=1
 debug.sf.layer_caching_active_layer_timeout_ms=1000
-debug.sf.early.app.duration=16600000
-debug.sf.early.sf.duration=16600000
-debug.sf.earlyGl.app.duration=16600000
-debug.sf.earlyGl.sf.duration=16600000
 debug.sf.enable_gl_backpressure=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.frame_rate_multiple_threshold=120
-debug.sf.hw=0
-debug.sf.late.app.duration=16600000
-debug.sf.late.sf.duration=10500000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.region_sampling_timer_timeout_ns=200000000
 debug.sf.region_sampling_period_ns=200000000
-debug.sf.use_phase_offsets_as_durations=1
 debug.sf.defer_refresh_rate_when_off=1
 graphics.gpu.profiler.support=true
 dev.pm.dyn_samplingrate=1
@@ -324,7 +315,7 @@ vendor.display.vds_allow_hwc=1
 vendor.display.override_doze_mode=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
-ro.config.avoid_gfx_accel=true
+vendor.display.perf_hint_window=50
 
 # HWUI
 debug.hwui.use_hint_manager=true
@@ -350,6 +341,9 @@ ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.hardware.keystore_desede=true
 vendor.gatekeeper.disable_spu=true
 vendor.gatekeeper.is_security_level_spu=0
+
+# Enable Vulkan for HWUI
+ro.hwui.use_vulkan=true
 
 # Logging
 persist.log.tag.QC2Buf=W
