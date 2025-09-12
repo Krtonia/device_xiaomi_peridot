@@ -50,4 +50,4 @@ git clone https://github.com/poco-f6-peridot/android_vendor_qcom_opensource_vibr
 git clone https://github.com/F6-test/kernel_peridot_hyperos.git -b aosp-15-qpr2-rebase device/xiaomi/peridot-kernel --depth=1
 
 # Vendor 
-git clone https://github.com/Krtonia/vendor_xiaomi_peridot.git -b 16-viper vendor/xiaomi/peridot --depth=1
+git clone https://github.com/Krtonia/vendor_xiaomi_peridot.git -b dolby vendor/xiaomi/peridot --depth=1
