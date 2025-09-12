@@ -32,7 +32,7 @@ git clone -b 16 https://github.com/Voltage-Peridot/device_qcom_sepolicy_vndr_sm8
 
 # Xiaomi
 rm -rf hardware/xiaomi
-git clone https://github.com/Krtonia/hardware_xiaomi_peridot.git -b 16 hardware/xiaomi
+git clone https://github.com/Krtonia/hardware_xiaomi_peridot.git -b viper hardware/xiaomi
 
 # Viper4fx
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
