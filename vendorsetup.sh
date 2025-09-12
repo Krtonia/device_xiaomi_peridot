@@ -34,8 +34,9 @@ git clone -b 16 https://github.com/Voltage-Peridot/device_qcom_sepolicy_vndr_sm8
 rm -rf hardware/xiaomi
 git clone https://github.com/Krtonia/hardware_xiaomi_peridot.git -b 16 hardware/xiaomi
 
-# Viper4fx
-git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
+# Dolby
+rm -rf hardware/dolby
+git clone https://github.com/F6-test/hardware_dolby.git -b 16-oss hardware/dolby
 
 # Miuicamera
 git clone https://github.com/peridot-hyperos-2/vendor-xiaomi-peridot-miuicamera vendor/xiaomi/peridot-miuicamera --depth=1
