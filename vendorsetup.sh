@@ -32,7 +32,7 @@ git clone -b 16 https://github.com/Voltage-Peridot/device_qcom_sepolicy_vndr_sm8
 
 # Xiaomi
 rm -rf hardware/xiaomi
-git clone https://github.com/Krtonia/hardware_xiaomi_peridot.git -b 16 hardware/xiaomi
+git clone https://github.com/Krtonia/hardware_xiaomi_peridot.git -b viper hardware/xiaomi
 
 # Dolby
 rm -rf hardware/dolby
