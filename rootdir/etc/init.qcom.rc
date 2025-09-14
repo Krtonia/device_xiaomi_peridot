@@ -808,3 +808,7 @@ service vendor.qti.hardware.display.allocator /vendor/bin/hw/vendor.qti.hardware
     capabilities SYS_NICE
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
+
+# Workaround for cache
+rm /data/resource-cache
+rm /data/system/package_cache
