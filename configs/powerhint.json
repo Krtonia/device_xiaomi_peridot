@@ -638,6 +638,24 @@
       "Duration": 5000,
       "Value": "10000"
     },
+	{
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPUBWMinFreq", 
+      "Duration": 80,
+      "Value": "2092000"
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "L3MinFreq",
+      "Duration": 80, 
+      "Value": "902400"
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 80,
+      "Value": "1228800"
+    },
     {
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "ThermalMessage",
