@@ -50,7 +50,8 @@ SPAMMY_LOG_TAGS := \
     BackgroundInstallControlService \
     BackupTransportManager \
     ActivityManager \
-    qcrilNrd
+    qcrilNrd \
+	HWUI
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
