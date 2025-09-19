@@ -32,7 +32,7 @@ git clone -b 16 https://github.com/Voltage-Peridot/device_qcom_sepolicy_vndr_sm8
 
 # Xiaomi
 rm -rf hardware/xiaomi
-git clone https://github.com/Krtonia/hardware_xiaomi_peridot.git -b 16 hardware/xiaomi
+git clone https://github.com/Krtonia/hardware_xiaomi_peridot.git -b viper hardware/xiaomi
 
 # Dolby
 rm -rf hardware/dolby
@@ -40,7 +40,7 @@ git clone https://github.com/F6-test/hardware_dolby.git -b 16-oss hardware/dolby
 
 # Miuicamera
 git clone https://github.com/peridot-hyperos-2/vendor-xiaomi-peridot-miuicamera vendor/xiaomi/peridot-miuicamera --depth=1
-git clone https://github.com/peridot-hyperos-2/device_xiaomi_peridot-miuicamera device/xiaomi/peridot-miuicamera --depth=1
+git clone https://github.com/F6-test/device_xiaomi_peridot-miuicamera.git - b aosp-15-qpr2 device/xiaomi/peridot-miuicamera --depth=1
 
 # Vibrator-HAL
 rm -rf vendor/qcom/opensource/vibrator
@@ -50,4 +50,4 @@ git clone https://github.com/poco-f6-peridot/android_vendor_qcom_opensource_vibr
 git clone https://github.com/F6-test/kernel_peridot_hyperos.git -b aosp-15-qpr2-rebase device/xiaomi/peridot-kernel --depth=1
 
 # Vendor 
-git clone https://github.com/Krtonia/vendor_xiaomi_peridot.git -b 16-viper vendor/xiaomi/peridot --depth=1
+git clone https://github.com/Krtonia/vendor_xiaomi_peridot.git -b dolby vendor/xiaomi/peridot --depth=1
